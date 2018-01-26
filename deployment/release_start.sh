@@ -1,4 +1,5 @@
 #!/bin/sh
+set -e
 
 if [ ! -d "./.git" ];then cd $(git rev-parse --show-cdup); fi;
 VERSION=$1
