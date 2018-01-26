@@ -40,3 +40,5 @@ git checkout -
 git flow release finish -m "$RELEASETAG" $RELEASETAG
 
 git push origin develop && git push origin master --tags && git push origin --delete "$GITBRANCHFULL"
+
+git checkout develop
