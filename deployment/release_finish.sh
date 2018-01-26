@@ -37,6 +37,6 @@ git checkout master
 git pull origin master
 git checkout -
 
-git flow release finish -m "release $RELEASETAG" $RELEASETAG
+git flow release finish -m "$RELEASETAG" $RELEASETAG
 
 git push origin develop && git push origin master --tags && git push origin --delete "$GITBRANCHFULL"
