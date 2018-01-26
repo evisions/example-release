@@ -1,4 +1,5 @@
 #!/bin/sh
+set -e
 
 if [ ! -d "./.git" ];then cd $(git rev-parse --show-cdup); fi;
 
@@ -38,4 +39,4 @@ git checkout -
 
 git flow release finish -m "release $RELEASETAG" $RELEASETAG
 
-git push origin develop && git push origin master --tags && git push origin --delete $GITBRANCHFULL
+git push origin develop && git push origin master --tags && git push origin --delete "$GITBRANCHFULL"
